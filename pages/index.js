@@ -33,8 +33,8 @@ export async function getStaticProps() {
 }
 
 export default function Recipes({ Page }) {
-  const heroBanner = Page[0].fields.components[0].fields;
-  const componentAbout = Page[0].fields.components[1].fields;
+  const heroBanner = Page[0].fields.components[0];
+  const componentAbout = Page[0].fields.components[1];
   const componentTania = Page[0].fields.components[2].fields;
   const componentAdele = Page[0].fields.components[3].fields;
   const componentTMS = Page[0].fields.components[4].fields;
@@ -48,9 +48,14 @@ export default function Recipes({ Page }) {
   return (
     <div className="anchor" id="top">
       <Nav />
-      <ComponentHeroCarousel contentModule={heroBanner} />
+
+      {heroBanner.sys.id === "GotvXMFlHawEIruSlb9rY" && (
+        <ComponentHeroCarousel contentModule={heroBanner.fields} />
+      )}
       <div className="anchor" id="about"></div>
-      <Component2ColumnImageText contentModule={componentAbout} />
+      {componentAbout.sys.id === "4PubRyG8rMzCZSvdvnJdcK" && (
+        <Component2ColumnImageText contentModule={componentAbout.fields} />
+      )}
       <div className="anchor" id="tania"></div>
       <FounderProfile contentModule={componentTania} />
       <div className="anchor" id="adele"></div>
