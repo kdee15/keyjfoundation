@@ -1,5 +1,5 @@
-const C_SPACE_ID = "0s4tbbqae2go";
-const C_DELIVERY_KEY = "xg-T4bBrLvhG693vx5fA8Dej-ZdSwowP2mTEFDMAXCA";
+const C_SPACE_ID = "vaami5stiyf0";
+const C_DELIVERY_KEY = "Vmbolj4fGolB5qslxe8v3jaDnI2lqQpqCw7MSIDT08Y";
 
 module.exports = {
   C_DELIVERY_KEY,
